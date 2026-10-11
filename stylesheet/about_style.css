@@ -1,0 +1,210 @@
+body {
+    width: 100%;
+    background-image: url("../images/forest_2.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+body::after {
+    content: "";
+    inset: 0;
+    z-index: -1;
+    position: fixed;
+    background-image: linear-gradient(to right, rgba(7, 28, 24, 0.75), transparent 90%);
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+}
+
+body::before {
+    content: "";
+    inset: 0;
+    z-index: -1;
+    position: fixed;
+    background-image: linear-gradient(to left, rgba(7, 28, 24, 0.75), transparent 90%);
+    background-size: 50% 100%;
+    background-position-x: right;
+    background-repeat: no-repeat;
+}
+
+main {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(1.5rem, 4vw, 4rem) clamp(1.5rem, 5vw, 5rem) clamp(1.5rem, 3vw, 3rem);
+    gap: 1.5rem;
+}
+
+h1 {
+    color: #efefe0;
+    font-size: clamp(2.7rem, 3.5vw, 5.4rem);
+}
+
+h1::before {
+    content: "ABOUT TECHFORWILD";
+    font-size: 0.9rem;
+    color: #b1d58e;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 3rem clamp(1.5rem, 4vw, 4rem);
+    background-color: rgba(13, 39, 30, 0.85);
+    border-radius: 2.5rem;
+    max-width: 58.5rem;
+}
+
+h2 {
+    font-size: clamp(2.7rem, 3.5vw, 5.4rem);
+    color: #efefe0;
+}
+
+#wim::before {
+    content: "OUR PURPOSE";
+    font-size: 0.9rem;
+    color: #b1d58e;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    max-width: 60rem;
+    color: rgba(215, 220, 209, 0.8);
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+ol {
+    color: #efefe0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+main li {
+    border: 1px solid #b1d58e;
+    padding: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    background-color: rgba(13, 39, 30, 0.8);
+    transition: all 0.4s ease;
+}
+
+main li p {
+    font-size: 1.1rem;
+}
+
+main li:hover {
+    box-shadow: 0 1px 10px rgba(239, 239, 224, 0.3);
+    translate: 0 -0.05rem;
+}
+
+#project::before {
+    content: "OUR PRODUCT";
+    font-size: 0.9rem;
+    color: #b1d58e;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+main ul {
+    color: #efefe0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#team::before {
+    content: "OUR TEAM";
+    font-size: 0.9rem;
+    color: #b1d58e;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.team-members {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.member {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    flex: 1 1 0;
+    min-width: 15.625rem;
+}
+
+.member h3 {
+    font-size: clamp(1.3rem, 1.8rem, 1.8rem);
+}
+
+.member p {
+    margin: 0.5rem 0;
+}
+
+.team {
+    width: 100%;
+}
+
+#social::before {
+    content: "OUR SOCIAL MEDIA";
+    font-size: 0.9rem;
+    color: #b1d58e;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+#insta {
+    display: flex;
+    gap: 0.7rem;
+}
+
+#insta div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+#insta h3 {
+    color: #efefe0;
+}
+#insta p {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#insta img {
+    width: 50px;
+    /*height: auto;*/
+    aspect-ratio: 1/1;
+}
+
+.socials {
+    width: 100%;
+}
+
+@media screen and (max-width: 750px) {
+    #insta p {
+        font-size: 1rem;
+    }
+
+    body {
+        background-size: cover;
+        background-position: center;
+    }
+}
